@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+  faja:
+    image: johncapobianco/faja:faja
+    container_name: faja
+    restart: always
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - "8501:8501"
